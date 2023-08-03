@@ -41,4 +41,12 @@ obj = { age: 12 };
 obj = { name: "str", age: 23 };
 
 type OBJ2 = { name: string } & { age: number };
-let obj2 : OBJ2 = { name: "str", age:12};
+let obj2: OBJ2 = { name: "str", age: 12 };
+
+type OBJ3 = { name: string, age?: number };
+
+let obj3: OBJ = { name: "str" };
+obj3 = { name: "name", age: 12 };
+
+// obj3.age =12; // xato
+console.log("age" in obj ? "mavjud " : "mavjud emas");

@@ -24,3 +24,8 @@ var obj;
 obj = { name: "str" };
 obj = { age: 12 };
 obj = { name: "str", age: 23 };
+var obj2 = { name: "str", age: 12 };
+var obj3 = { name: "str" };
+obj3 = { name: "name", age: 12 };
+// obj3.age =12; // xato
+console.log("age" in obj ? "mavjud " : "mavjud emas");
