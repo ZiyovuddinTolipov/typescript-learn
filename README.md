@@ -1,14 +1,18 @@
 # typescript-learn
 
 .ts fayilni .js ga o'tkazib beradi.
+```command
 tsc index.ts
+```
 
 xatoliklarni to'g'ri ko'rsatishi uchun .
+```command
 tsc --init
+```
 
 config fayldagi comentdagini yoqib qoyamiz.
 ``` json
-sourceMap: true ;
+"sourceMap": true ;
 ```
 
 ## hadeb o'zgarishlarni terminalda run qilavermaslik uchun config faylga 
