@@ -12,7 +12,7 @@ tsc --init
 
 config fayldagi comentdagini yoqib qoyamiz.
 ``` json
-"sourceMap": true ;
+"sourceMap": true ,
 ```
 
 ## hadeb o'zgarishlarni terminalda run qilavermaslik uchun config faylga 
@@ -28,7 +28,6 @@ tsc -locale ru
 ## agar kelayotgan malumot oldiga ? belgisini qo'ysak  shu o'zgaruvchidan ma'lumot kelmay qolsa ham xatolik bermaydi 
 ```typescript
 const carData =(carName:string,carYear?:number):string =>{
-
     return `Mashina nomi - ${carName}, Mashina yili - ${carYear}`
 }
 console.log(carData('BMW'));
@@ -42,10 +41,7 @@ type carType ={
 }
 
 const carData =(car:carType):string =>{
-
     return `Mashina nomi - ${car.carName}, Mashina yili - ${car.carYear}`
 }
-
-
 console.log(carData({carName:'Nexia 2'}));
 ```
