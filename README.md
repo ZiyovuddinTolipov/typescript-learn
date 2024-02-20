@@ -32,7 +32,7 @@ const carData =(carName:string,carYear?:number):string =>{
 }
 console.log(carData('BMW'));
 ```
-
+## Tiplar
 ## Turlarni mana shunday yozsa ham bo'ladi
 ```typescript
 type carType ={
@@ -45,3 +45,36 @@ const carData =(car:carType):string =>{
 }
 console.log(carData({carName:'Nexia 2'}));
 ```
+## Biror o'zgaruvchi uchun ham *type* hususiyatidan foydalansa ham bo'ladi.
+```typescript 
+type strOrNum = string | number;
+const ds:strOrNum = "12"
+```
+
+## interface
+### vorislik 
+
+### interface da vorislik 
+```typescript
+interface Icar {
+    carName:string,
+    carYear?:number
+}
+
+interface IBmw extends Icar {
+    color:string,
+    price:string,
+}
+
+const carData =(car:Icar):string =>{
+    return `Mashina nomi - ${car.carName}, Mashina yili - ${car.carYear}`
+}
+
+const logBmw =(data:IBmw):string =>{
+    return `Nomi - ${data.carName} , narxi : ${data.price}`;
+}
+console.log(logBmw({carName:"Bmw x5",color:"black",price:'100$'}))
+console.log(carData({carName:'Nexia 2'}));
+```
+### type da vorislik
+

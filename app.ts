@@ -55,11 +55,27 @@ type carType ={
     carName:string,
     carYear?:number
 }
+type BMWType = carType & {
+    color:string,
+    price:string,
+}
+// type strOrNum = string | number;
 
-const carData =(car:carType):string =>{
-
+// const ds:strOrNum = "12"
+interface Icar {
+    carName:string,
+    carYear?:number
+}
+interface IBmw extends Icar {
+    color:string,
+    price:string,
+}
+const carData =(car:Icar):string =>{
     return `Mashina nomi - ${car.carName}, Mashina yili - ${car.carYear}`
 }
 
-
+const logBmw =(data:IBmw):string =>{
+    return `Nomi - ${data.carName} , narxi : ${data.price}`;
+}
+console.log(logBmw({carName:"Bmw x5",color:"black",price:'100$'}))
 console.log(carData({carName:'Nexia 2'}));
