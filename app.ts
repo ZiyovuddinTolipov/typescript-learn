@@ -50,9 +50,16 @@ obj3 = { name: "name", age: 12 };
 
 // obj3.age =12; // xato
 console.log("age" in obj ? "mavjud " : "mavjud emas");
-
-const carData =(carName:string,carYear?:number):string =>{
-
-    return `Mashina nomi - ${carName}, Mashina yili - ${carYear}`
+//\************************************************************************************************
+type carType ={
+    carName:string,
+    carYear?:number
 }
-console.log(carData('BMW'));
+
+const carData =(car:carType):string =>{
+
+    return `Mashina nomi - ${car.carName}, Mashina yili - ${car.carYear}`
+}
+
+
+console.log(carData({carName:'Nexia 2'}));

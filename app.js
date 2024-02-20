@@ -30,8 +30,9 @@ let obj3 = { name: "str" };
 obj3 = { name: "name", age: 12 };
 // obj3.age =12; // xato
 console.log("age" in obj ? "mavjud " : "mavjud emas");
-const carData = (carName) => {
-    return `Mashina nomi - ${carName}`;
+////////////////////////////////////////////////////////////////
+const carData = (car) => {
+    return `Mashina nomi - ${car.carName}, Mashina yili - ${car.carYear}`;
 };
-console.log(carData('BMW'));
+console.log(carData({ carName: 'Nexia 2' }));
 //# sourceMappingURL=app.js.map
