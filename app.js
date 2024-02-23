@@ -67,27 +67,27 @@
 // console.log(carData({carName:'Nexia 2'}));
 // const canvas = document.getElementById("canvas") as HTMLCanvasElement;
 // Literal type
-let car = "mers";
-car = "mers";
-const div = document.getElementById("div");
-function showElement(action) {
-    switch (action) {
-        case "hide":
-            return 0;
-        case "show":
-            return 1;
-    }
-}
+// let car: "mers" = "mers";
+// car = "mers";
+// type actionType = "show" | 'hide'
+// const div = document.getElementById("div") as HTMLCanvasElement;
+// function showElement(action: actionType): 1 | 0 {
+//     switch (action) {
+//         case "hide":
+//             return 0;
+//         case "show":
+//             return 1;
+//     }
+// }
 // ENUM
-var Dictionary;
-(function (Dictionary) {
-    Dictionary[Dictionary["Rus"] = 0] = "Rus";
-    Dictionary[Dictionary["Uzb"] = 1] = "Uzb";
-    Dictionary[Dictionary["Eng"] = 2] = "Eng";
-})(Dictionary || (Dictionary = {}));
-const uzbIndex = Dictionary.Uzb;
-const uzb = Dictionary[uzbIndex];
-console.log(uzb);
+// enum Dictionary {
+//     Rus,
+//     Uzb,
+//     Eng
+// }
+// const uzbIndex = Dictionary.Uzb;
+// const uzb = Dictionary[uzbIndex]
+// console.log(uzb);
 // const runEnum = () :number => {
 //     return 2;
 // }
@@ -95,4 +95,20 @@ console.log(uzb);
 //     Yes = 1,
 //     No = runEnum(),
 // }
+var Numbers;
+(function (Numbers) {
+    Numbers[Numbers["One"] = 0] = "One";
+    Numbers[Numbers["Two"] = 1] = "Two";
+    Numbers[Numbers["Three"] = 2] = "Three";
+})(Numbers || (Numbers = {}));
+function getUzbNumber(number) {
+    switch (number) {
+        case Numbers.One:
+            return "Bir";
+        case Numbers.Two:
+            return "Ikki";
+        case Numbers.Three:
+            return "Uch";
+    }
+}
 //# sourceMappingURL=app.js.map

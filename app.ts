@@ -87,32 +87,32 @@
 
 // Literal type
 
-let car: "mers" = "mers";
-car = "mers";
+// let car: "mers" = "mers";
+// car = "mers";
 
-type actionType = "show" | 'hide'
+// type actionType = "show" | 'hide'
 
-const div = document.getElementById("div") as HTMLCanvasElement;
+// const div = document.getElementById("div") as HTMLCanvasElement;
 
-function showElement(action: actionType): 1 | 0 {
-    switch (action) {
-        case "hide":
-            return 0;
-        case "show":
-            return 1;
-    }
-}
+// function showElement(action: actionType): 1 | 0 {
+//     switch (action) {
+//         case "hide":
+//             return 0;
+//         case "show":
+//             return 1;
+//     }
+// }
 
 // ENUM
-enum Dictionary {
-    Rus,
-    Uzb,
-    Eng
-}
+// enum Dictionary {
+//     Rus,
+//     Uzb,
+//     Eng
+// }
 
-const uzbIndex = Dictionary.Uzb;
-const uzb = Dictionary[uzbIndex]
-console.log(uzb);
+// const uzbIndex = Dictionary.Uzb;
+// const uzb = Dictionary[uzbIndex]
+// console.log(uzb);
 
 // const runEnum = () :number => {
 //     return 2;
@@ -121,3 +121,20 @@ console.log(uzb);
 //     Yes = 1,
 //     No = runEnum(),
 // }
+
+enum Numbers {
+    One,
+    Two,
+    Three
+}
+
+function getUzbNumber(number: Numbers): string {
+    switch (number) {
+        case Numbers.One:
+                return "Bir";
+        case Numbers.Two:
+                return "Ikki";
+        case Numbers.Three:
+                return "Uch";
+    }
+}
