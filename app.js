@@ -78,4 +78,21 @@ function showElement(action) {
             return 1;
     }
 }
+// ENUM
+var Dictionary;
+(function (Dictionary) {
+    Dictionary[Dictionary["Rus"] = 0] = "Rus";
+    Dictionary[Dictionary["Uzb"] = 1] = "Uzb";
+    Dictionary[Dictionary["Eng"] = 2] = "Eng";
+})(Dictionary || (Dictionary = {}));
+const uzbIndex = Dictionary.Uzb;
+const uzb = Dictionary[uzbIndex];
+console.log(uzb);
+// const runEnum = () :number => {
+//     return 2;
+// }
+// enum Decision {
+//     Yes = 1,
+//     No = runEnum(),
+// }
 //# sourceMappingURL=app.js.map

@@ -102,3 +102,22 @@ function showElement(action: actionType): 1 | 0 {
             return 1;
     }
 }
+
+// ENUM
+enum Dictionary {
+    Rus,
+    Uzb,
+    Eng
+}
+
+const uzbIndex = Dictionary.Uzb;
+const uzb = Dictionary[uzbIndex]
+console.log(uzb);
+
+// const runEnum = () :number => {
+//     return 2;
+// }
+// enum Decision {
+//     Yes = 1,
+//     No = runEnum(),
+// }
