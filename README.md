@@ -77,4 +77,69 @@ console.log(logBmw({carName:"Bmw x5",color:"black",price:'100$'}))
 console.log(carData({carName:'Nexia 2'}));
 ```
 ### type da vorislik
+```typescript
+type carType ={
+    carName:string,
+    carYear?:number
+}
+type BMWType = carType & {
+    color:string,
+    price:string,
+}
+```
 
+### Bunday holatlar ham mavjud
+```typescript
+interface Icar {
+    carName:string,
+    carYear?:number
+}
+interface IBmw extends Icar {
+    color:string,
+    price:string,
+}
+const carPoint =(point:Icar):void =>{
+    const carInfo:IBmw = point as IBmw;
+}
+```
+### Canvas 
+```typescript
+const canvas = document.getElementById("canvas") as HTMLCanvasElement;
+```
+
+## Literal type bunda o'zgaruvch qiymati faqat 'mers' bo'lishi mumkun holos
+```typescript
+let car:"mers"="mers";
+car = "mers";
+```
+### bunday holatlarda ham ishlatiladi
+```typescript
+type actionType = "show" | 'hide'
+
+const div = document.getElementById("div") as HTMLCanvasElement;
+
+function showElement(action: actionType): boolean {
+    switch (action) {
+        case "hide":
+            return false;
+        case "show":
+            return true;
+    }
+}
+```
+### funksiyadan qaytadigan qiymatni ham o'zgartirishmiz mumkun 
+
+```typescript
+type actionType = "show" | 'hide'
+
+const div = document.getElementById("div") as HTMLCanvasElement;
+
+function showElement(action: actionType): 1 | 0 {
+    switch (action) {
+        case "hide":
+            return 0;
+        case "show":
+            return 1;
+    }
+}
+```
