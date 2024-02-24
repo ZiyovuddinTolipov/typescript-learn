@@ -192,3 +192,27 @@ const uzbIndex = Dictionary.Uzb;
 const uzb = Dictionary[uzbIndex];
 console.log(uzb);
 ```
+
+## Tuples
+
+### Tuples - Bu o'zgarmas array
+
+```typescript
+const array: [number, string, boolean] = [21, "Tolipov", true];
+```
+
+### bunday holatda ichidagi qiymatlarni joyini o'zgartirib bo'lmaydi va yangi element ham qo'shib bo'lmaydi
+
+## Generics
+
+### https://www.typescriptlang.org/docs/handbook/2/generics.html
+
+```typescript
+function loggerData<T>(number: T): T {
+  console.log(number);
+  return number;
+}
+loggerData<number>(12);
+loggerData<object>({ fullName: "Tolipov Ziyoviddin", surName: "Tolipov" });
+loggerData<string>("hello world!");
+```

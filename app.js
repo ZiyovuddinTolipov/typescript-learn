@@ -95,20 +95,29 @@
 //     Yes = 1,
 //     No = runEnum(),
 // }
-var Numbers;
-(function (Numbers) {
-    Numbers[Numbers["One"] = 0] = "One";
-    Numbers[Numbers["Two"] = 1] = "Two";
-    Numbers[Numbers["Three"] = 2] = "Three";
-})(Numbers || (Numbers = {}));
-function getUzbNumber(number) {
-    switch (number) {
-        case Numbers.One:
-            return "Bir";
-        case Numbers.Two:
-            return "Ikki";
-        case Numbers.Three:
-            return "Uch";
-    }
+// enum Numbers {
+//     One,
+//     Two,
+//     Three
+// }
+// function getUzbNumber(number: Numbers): string {
+//     switch (number) {
+//         case Numbers.One:
+//                 return "Bir";
+//         case Numbers.Two:
+//                 return "Ikki";
+//         case Numbers.Three:
+//                 return "Uch";
+//     }
+// }
+// Tuples 
+// const array: [number, string, boolean] = [21, "Tolipov", true]
+// Generics 
+function loggerData(number) {
+    console.log(number);
+    return number;
 }
+loggerData(12);
+loggerData({ fullName: "Tolipov Ziyoviddin", surName: "Tolipov" });
+loggerData('hello world!');
 //# sourceMappingURL=app.js.map

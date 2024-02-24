@@ -122,19 +122,32 @@
 //     No = runEnum(),
 // }
 
-enum Numbers {
-    One,
-    Two,
-    Three
-}
+// enum Numbers {
+//     One,
+//     Two,
+//     Three
+// }
 
-function getUzbNumber(number: Numbers): string {
-    switch (number) {
-        case Numbers.One:
-                return "Bir";
-        case Numbers.Two:
-                return "Ikki";
-        case Numbers.Three:
-                return "Uch";
-    }
+// function getUzbNumber(number: Numbers): string {
+//     switch (number) {
+//         case Numbers.One:
+//                 return "Bir";
+//         case Numbers.Two:
+//                 return "Ikki";
+//         case Numbers.Three:
+//                 return "Uch";
+//     }
+// }
+
+// Tuples 
+
+// const array: [number, string, boolean] = [21, "Tolipov", true]
+
+// Generics 
+function loggerData<T>(number:T):T{
+    console.log(number);
+    return number;
 }
+loggerData<number>(12);
+loggerData<object>({fullName:"Tolipov Ziyoviddin",surName:"Tolipov"});
+loggerData<string>('hello world!')
